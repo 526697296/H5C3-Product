@@ -1,0 +1,74 @@
+/*
+BEM设计模式
+
+模块[没有前缀，多个单词用-连接]
+元素[元素在模块之后，可以有多个层级，用_连接]
+*/
+a{
+    text-decoration: none;
+}
+
+.header{
+    height: 80px;
+    background-color: #f7f7f7;
+}
+.header__wrap{
+    position: relative;
+    width: 1200px;
+    height: 80px;
+    margin:0 auto;
+}
+.header__logo{
+    height: 38px;
+    line-height: 38px;
+    width: 150px;
+    font-size: 20px;
+    color: #07111b;
+    text-indent: 50px;
+    background: url('../image/logo.png') left center no-repeat;
+    background-size: 38px 38px; 
+    position: absolute;
+    top:50%;
+    margin-top: -19px; 
+    left: 20px;
+}
+.header__nav{
+    position: absolute;
+    right: 20px;
+    height: 38px;
+    top: 50%;
+    margin-top: -19px;
+}
+.header__nav-item{
+    color:#292f35;
+    font-size: 14px;
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    float: left;
+    margin-left: 40px;
+    position: relative;
+}
+.header__nav-item:hover{
+    color:#f01400;
+}
+.header__nav-item_status_active{
+    color: #f01400;
+}
+.header__nav-item_status_active::after{
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #f01400;
+    height: 2px;
+}
+.header__nav-item_custom_button{
+    background-color: #000;
+    color:#f4f4f5;
+    text-align: center;
+    width: 90px;
+    border-radius: 3px;
+}
