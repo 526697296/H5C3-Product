@@ -72,3 +72,27 @@ a{
     width: 90px;
     border-radius: 3px;
 }
+
+/*第一屏*/
+.screen-1{
+    height: 800px;
+    background: #e7e7e7;
+}
+.screen-1__heading{
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-size: 46px;
+    color:#4d555d;
+    text-align: center;
+}
+.screen-1__heading b{
+    color:#f01400;
+    font-weight: normal;
+}
+.screen-1__phone{
+
+}
+.screen-1__shadow{
+
+}
