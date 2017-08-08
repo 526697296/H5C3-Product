@@ -181,8 +181,74 @@ BEM设计模式
 }
 /*第三屏*/
 .screen-3{
-    background-color:red;
+    background-color:#a71316;
     height: 800px;
     position: relative;
     overflow: hidden;
+}
+.screen-3__wrap{
+    margin:0 auto;
+    height: auto;
+    width: 1200px;
+    border:1px solid black;
+    position: relative;
+}
+.screen-3__heading{
+    font-size: 46px;
+    line-height: 46px;
+    text-align: left;
+    color: #ffffff;
+    padding-top: 94px;
+}
+.screen-3__subheading{
+    font-size: 14px;
+    color: #ffffff;
+    text-align: left;
+    padding-top: 25px;
+    line-height: 28px;
+}
+.screen-3__phone{
+    width: 750px;
+    height: 873px;
+    background: url("../image/bg-screen-3.png") center top;
+    position: absolute;
+    right: 0;
+    top: 195px;
+    z-index: 2;
+
+}
+.screen-3__features{
+    position: absolute;
+    top: 395px;
+    left:0;
+    width: 320px;
+    height:280px;
+}
+.screen-3__features__item{
+    width: 138px;
+    height:118px;
+    border:1px solid #cb7173;
+    border-radius: 3px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 20px 20px 0;
+    float: left;
+}
+.screen-3__features__item__number{
+    font-size: 36px;
+    height: 36px;
+    line-height: 36px;
+}
+.screen-3__features__item__desc{
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    padding: 28px 0 8px 0;
+}
+
+/*第4屏*/
+.screen-4{
+    background-color:#fafafa;
+    height: 800px;
+    position: relative;
 }
