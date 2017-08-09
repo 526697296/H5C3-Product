@@ -362,11 +362,71 @@ BEM设计模式
     background: url("../image/phone-4.png") no-repeat left top;
 }
 
-
 /*第5屏*/
-
 .screen-5 {
-    background-color: #07111b;
+    background-color: #d9dde1;
+    overflow: hidden;
     height: 800px;
     position: relative;
+}
+.screen-5__bg{
+    background: url("../image/bg-screen-5.png") no-repeat center;
+    width: 1920px;;
+    height: 433px;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+    bottom: -100px;
+}
+.screen-5__heading {
+    font-size: 46px;
+    line-height: 46px;
+    color: #f01400;
+    text-align: center;
+    padding-top:130px;
+}
+
+.screen-5__subheading {
+    font-size: 14px;
+    color:#2c3137;
+    text-align: center;
+    padding-top: 25px;
+    line-height: 28px;
+}
+/*立即购买*/
+.screen-buy {
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    background: #2b333b url("../image/bg-screen-buy.png") no-repeat center;
+    
+}
+.screen-buy__button{
+    height:80px;
+    width: 240px;
+    color:#fff;
+    background-color: #f01414;
+    font-size: 24px;
+    line-height: 80px;
+    text-align: center;
+    display: block;
+    border-radius: 3px;
+    margin:120px auto;
+    transition: all 0.5s;
+}
+.screen-buy__button:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+/*脚部*/
+.footer{
+    height: 80px;
+    line-height: 80px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    background-color: #07111b;
+}
+.footer a{
+    color:#fff;
 }
