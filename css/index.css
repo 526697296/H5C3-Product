@@ -1,138 +1,126 @@
-/*
-BEM设计模式
 
-模块[没有前缀，多个单词用-连接]
-元素[元素在模块之后，可以有多个层级，用_连接]
-*/
-
-.header {
-    height: 80px;
-    background-color: #f7f7f7;
+/* 头部模块开始 */
+.box{
+    overflow: hidden;
 }
-
-.header__wrap {
-    position: relative;
-    width: 1200px;
-    height: 80px;
-    margin: 0 auto;
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+    height: 60px;
+    background-color: #FAFAFA;
+    color: #292E35;
 }
 
 .header__logo {
-    height: 38px;
-    line-height: 38px;
-    width: 150px;
-    font-size: 20px;
-    color: #07111b;
-    text-indent: 50px;
-    background: url('../image/logo.png') left center no-repeat;
-    background-size: 38px 38px;
-    position: absolute;
-    top: 50%;
-    margin-top: -19px;
-    left: 20px;
+    float: left;
+    height: 40px;
+    margin: 10px 0px 0px 10px;
+    padding: 0px 0px 0px 50px;
+    background: url("./../img/logo.png") left top no-repeat;
+    display: block;
+    font-size: 18px;
+    line-height: 40px;
 }
 
 .header__nav {
-    position: absolute;
-    right: 20px;
-    height: 38px;
-    top: 50%;
-    margin-top: -19px;
-}
-
-.header__nav-item {
-    color: #292f35;
-    font-size: 14px;
-    display: block;
-    height: 38px;
-    line-height: 38px;
-    float: left;
-    margin-left: 40px;
+    float: right;
+    margin: 10px 10px 0px 0px;
     position: relative;
 }
 
 .header__nav-item:hover {
-    color: #f01400;
+    color: #f03131;
 }
 
-.header__nav-item_status_active {
-    color: #f01400;
+.header__nav-item {
+    float: left;
+    padding: 0 20px;
+    font-size: 14px;
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    line-height: 40px;
 }
 
-.header__nav-item_status_active::after {
-    content: '';
-    display: block;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: #f01400;
+.header__nav-item-tip {
+    width: 60px;
     height: 2px;
+    background: red;
+    position: absolute;
+    left: 20px;
+    bottom: -2px;
 }
 
 .header__nav-item_custom_button {
-    background-color: #000;
-    color: #f4f4f5;
-    text-align: center;
-    width: 90px;
-    border-radius: 3px;
+    color: #fff;
+    background: #000;
+    width: 60px;
+    margin: 0 20px;
+    border-radius: 5px;
 }
 
+.header__nav-item_custom_button:hover {
+    color: #fff;
+}
 
-/*第一屏*/
+/* 第一屏模块开始 */
 
 .screen-1 {
+    color: rgb(255,255,255);
     height: 800px;
-    background: #e7e7e7;
-    background: url('../image/bg-screen-1.png') no-repeat center;
-    background-size: cover;
+    background-color: #ececec;
+    text-align: center;
+    background: url(../img/bg-screen-1.png) no-repeat center bottom;
+    background-size:cover;
+    position: relative;
+}
+
+.screen-1__wrap {
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0px auto;
+    height: 100%;
     position: relative;
     overflow: hidden;
 }
 
 .screen-1__heading {
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-    font-size: 46px;
-    color: #4d555d;
-    text-align: center;
-    padding-top: 152px;
+    position: absolute;
+    top: 160px;
+    width: 100%;
+    font-size: 42px;
 }
 
-.screen-1__heading b {
-    color: #f01400;
+.screen-1__heading b{
+    color: #f01414;
     font-weight: normal;
 }
-
 .screen-1__phone {
+    position: absolute;
+    bottom: 180px;
     width: 1375px;
     height: 305px;
-    background: url("../image/screen-1-phone.png") no-repeat center;
-    position: absolute;
     left: 50%;
     margin-left: -687px;
-    bottom: 180px;
-    z-index: 2;
+    background: url(../img/screen-1-phone.png) no-repeat center ;
+    background-size: cover;
+    z-index: 1;
 }
-
 .screen-1__shadow {
+    position: absolute;
+    bottom: 30px;
     width: 1233px;
     height: 411px;
-    background: url("../image/screen-1-shadow.png") no-repeat center;
-    position: absolute;
     left: 50%;
     margin-left: -616px;
-    bottom: 30px;
-    z-index: 1;
-    opacity: .8;
+    background: url(../img/screen-1-shadow.png) no-repeat center ;
 }
-
-
-/*第二屏*/
-
+/* 第二屏开始 */
 .screen-2 {
-    color: rgb(7, 17, 27);
+    color: rgb(7,17,27);
     height: 800px;
     background-color: #fafafa;
     text-align: center;
@@ -161,272 +149,308 @@ BEM设计模式
     position: absolute;
     font-size: 16px;
 }
-
-.screen-2__phone {
+.screen-2__phone{
     width: 800px;
     height: 873px;
-    background: url("../image/bg-screen-2.png") no-repeat;
+    background: url(../img/bg-screen-2.png) no-repeat;
     position: absolute;
     left: 50%;
     margin-left: -464px;
     top: 270px;
 }
-
-.screen-2__point {
+.screen-2__point{
     font-size: 24px;
     color: #4D555d;
     position: absolute;
     width: 100px;
 }
-
-.screen-2__point_i_1 {
+.screen-2__point_i_1{
     top: 180px;
     left: -120px;
     padding-right: 112px;
-    background: url("../image/icon-point-right.png") no-repeat center right;
+    background: url(../img/icon-point-right.png) no-repeat center right;
 }
-
-.screen-2__point_i_2 {
+.screen-2__point_i_2{
     top: 37px;
     left: 584px;
-    padding-left: 112px;
-    background: url("../image/icon-point-left.png") no-repeat center left;
-}
 
-.screen-2__point_i_3 {
+    padding-left: 112px;
+    background: url(../img/icon-point-left.png) no-repeat center left;
+}
+.screen-2__point_i_3{
     top: 340px;
     left: 680px;
+
     padding-left: 112px;
-    background: url("../image/icon-point-left.png") no-repeat center left;
+    background: url(../img/icon-point-left.png) no-repeat center left;
 }
 
-
-/*第三屏*/
+/* 第三屏开始 */
 
 .screen-3 {
-    background-color: #a71316;
+    color: rgb(255,255,255);
     height: 800px;
+    background-color: #a71316;
+}
+
+.screen-3__wrap {
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0px auto;
+    height: 100%;
     position: relative;
     overflow: hidden;
 }
 
-.screen-3__wrap {
-    margin: 0 auto;
-    height: auto;
-    width: 1200px;
-    position: relative;
-}
-
 .screen-3__heading {
-    font-size: 46px;
-    line-height: 46px;
-    text-align: left;
-    color: #ffffff;
-    padding-top: 94px;
-}
-
-.screen-3__subheading {
-    font-size: 14px;
-    color: #ffffff;
-    text-align: left;
-    padding-top: 25px;
-    line-height: 28px;
-}
-
-.screen-3__phone {
-    width: 750px;
-    height: 873px;
-    background: url("../image/bg-screen-3.png") center top;
     position: absolute;
-    right: 0;
-    top: 195px;
-    z-index: 2;
+    top: 90px;
+    left: 10px;
+    width: 580px;
+    font-size: 36px;
+}
+.screen-3__subheading {
+    position: absolute;
+    top: 170px;
+    left: 10px;
+    width: 580px;
+    font-size: 16px;
+}
+
+.screen-3__phone{
+    width: 729px;
+    height: 900px;
+    position: absolute;
+    top: 200px;
+    left: 465px;
+    background: url(../img/bg-screen-3.png) no-repeat;
 }
 
 .screen-3__features {
     position: absolute;
-    top: 395px;
-    left: 0;
-    width: 320px;
-    height: 280px;
+    width: 328px;
+    height: 288px;
+    bottom: 140px;
+    left: 5px;
 }
-
-.screen-3__features__item {
+.screen-3__features-item-number{
+    height: 36px;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 32px 0 9px 0;
+    display: block;
+}
+.screen-3__features-item {
+    float: left;
     width: 138px;
     height: 118px;
-    border: 1px solid #cb7173;
+    border: 1px solid #D97173;
     border-radius: 3px;
-    color: #ffffff;
     text-align: center;
-    margin: 0 20px 20px 0;
-    float: left;
-}
-
-.screen-3__features__item__number {
-    font-size: 36px;
-    height: 36px;
-    line-height: 36px;
-    padding: 28px 0 8px 0;
-}
-
-.screen-3__features__item__desc {
-    font-size: 14px;
-    height: 14px;
     line-height: 14px;
+    font-size: 14px;
+    margin: 0 24px 24px 0;
+    color: #fff;
 }
 
 
-/*第4屏*/
-
-.screen-4 {
-    background-color: #ffffff;
+/* 第四屏开始 */
+.screen-4{
+    background-color: #fff;
+    text-align: center;
     height: 800px;
-    overflow: hidden;
-    position: relative;
 }
-
 .screen-4__wrap {
-    margin: 0 auto;
-    height: auto;
-    width: 1200px;
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0px auto;
+    height: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .screen-4__heading {
-    font-size: 46px;
-    line-height: 46px;
-    text-align: center;
-    color: #f01400;
-    padding-top: 135px;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    font-size: 42px;
+    color: #f01414;
 }
-
 .screen-4__subheading {
-    font-size: 14px;
-    color: #464a4f;
-    text-align: center;
-    padding-top: 29px;
-    line-height: 28px;
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    font-size: 16px;
 }
 
 .screen-4__type {
-    width: 1260px;
-    height: 270px;
-    position: absolute;
-    top: 304px;
+    width: 1300px;
     margin-left: 30px;
+    height: 270px;
+    bottom:220px;
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
 }
 
-.screen-4__type__item {
-    width: 240px;
-    margin-right: 50px;
+.screen-4__type-item {
+    width: 220px;
     height: 270px;
     float: left;
+    margin-right: 90px;
     position: relative;
-    text-align: center;
-    background-size: cover;
 }
-
-.screen-4__type__item__color {
-    height: 14px;
+.screen-4__type-item-name{
     width: 100%;
-    font-size: 14px;
-    line-height: 14px;
+    height: 40px;
+    position: absolute;
+    top: 300px;
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
     color: #2c3238;
-    position: absolute;
-    bottom: -44px;
 }
+.screen-4__type-item-storage{
 
-.screen-4__type__item__storage {
-    height: 12px;
     width: 100%;
-    font-size: 12px;
-    line-height: 12px;
-    color: #a4a6ae;
+    height: 40px;
     position: absolute;
-    bottom: -66px;
+    top: 328px;
+    font-size: 9px;
+    height: 9px;
+    line-height: 9px;
+    color: #93999f;
 }
 
-.screen-4__type__item_i_1 {
-    background: url("../image/phone-1.png") no-repeat left top;
+.screen-4__type .photo{
+    width: 240px;
+    height: 270px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-.screen-4__type__item_i_2 {
-    background: url("../image/phone-2.png") no-repeat left top;
-}
+    .screen-4__type-item_i_1 {
+        background: url("../img/phone-1.png") center left no-repeat;
+    }
 
-.screen-4__type__item_i_3 {
-    background: url("../image/phone-3.png") no-repeat left top;
-}
+    .screen-4__type-item_i_2 {
+        background: url("../img/phone-2.png") center left no-repeat;
+    }
 
-.screen-4__type__item_i_4 {
-    background: url("../image/phone-4.png") no-repeat left top;
-}
+    .screen-4__type-item_i_3 {
+        background: url("../img/phone-3.png") center left no-repeat;
+    }
 
-/*第5屏*/
+    .screen-4__type-item_i_4 {
+        background: url("../img/phone-4.png") center left no-repeat;
+    }
+
+/* 第五屏开始 */
 .screen-5 {
-    background-color: #d9dde1;
-    overflow: hidden;
     height: 800px;
-    position: relative;
+    text-align: center;
+    overflow: hidden;
+    background: #d9dde1;
+    position: relative; 
 }
-.screen-5__bg{
-    background: url("../image/bg-screen-5.png") no-repeat center;
-    width: 1920px;;
-    height: 433px;
-    background-size: contain;
+.screen-5__back{
+    width: 100%;
+    height: 370px;
+    background: url(../img/bg-screen-5.png) no-repeat bottom center ;
+    background-size: cover;
     position: absolute;
-    left: 50%;
-    margin-left: -960px;
     bottom: -100px;
 }
-.screen-5__heading {
-    font-size: 46px;
-    line-height: 46px;
-    color: #f01400;
-    text-align: center;
-    padding-top:130px;
-}
 
-.screen-5__subheading {
-    font-size: 14px;
-    color:#2c3137;
-    text-align: center;
-    padding-top: 25px;
-    line-height: 28px;
-}
-/*立即购买*/
-.screen-buy {
-    height: 320px;
+.screen-5__wrap {
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0px auto;
+    height: 100%;
     position: relative;
     overflow: hidden;
-    background: #2b333b url("../image/bg-screen-buy.png") no-repeat center;
-    
 }
-.screen-buy__button{
-    height:80px;
+
+.screen-5__heading {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    font-size: 42px;
+    color: #f01414;
+}
+.screen-5__subheading {
+    position: absolute;
+    top: 270px;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+.buy {
+    height: 80px;
+    padding: 120px 0px;
+    background: url(../img/bg-screen-buy.png) no-repeat bottom center #2b333b;
+}
+
+.buy__button:hover,
+.buy__button {
     width: 240px;
-    color:#fff;
-    background-color: #f01414;
-    font-size: 24px;
-    line-height: 80px;
-    text-align: center;
-    display: block;
-    border-radius: 3px;
-    margin:120px auto;
-    transition: all 0.5s;
-}
-.screen-buy__button:hover{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-}
-/*脚部*/
-.footer{
     height: 80px;
     line-height: 80px;
-    color: #ffffff;
-    font-size: 12px;
     text-align: center;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 3px;
+    margin: 0px auto;
+    display: block;
+    background-color: #f01414;
+    transition:all .5s;
+}
+.buy__button:hover{
+    box-shadow: 0 10px 10px rgba(0,0,0,.5);
+    transform:translate(0,-5px);
+}
+
+/*页脚模块开始*/
+.footer {
+    height: 80px;
+    line-height: 80px;
     background-color: #07111b;
+    text-align: center;
+    color: #fff;
 }
-.footer a{
-    color:#fff;
+
+
+/*大纲模块*/
+
+.outline {
+    position: fixed;
+    padding: 5px 10px;
+    bottom: 120px;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px 0px rgba(7, 17, 27, 0.1);
 }
+
+.outline__item {
+    display: block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 0;
+    background: rgb(255,255,255);
+    margin: 5px 0px 0px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #93999f;
+}
+.outline__item:first-child{
+    border:none;
+}
+.outline__item_status_active{
+    color: #000;
+}
+
+
